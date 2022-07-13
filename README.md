@@ -5,3 +5,4 @@
 # Reference
 
 [Working with JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+[fetch multiple urls at the same time](https://stackoverflow.com/questions/59037553/fetch-multiple-urls-at-the-same-time)

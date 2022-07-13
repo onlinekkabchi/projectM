@@ -1,26 +1,28 @@
 import { requestURL } from "../url/url.js";
 
-async function getData() {
-    const uri = requestURL;
-    const request = new Request(uri);
-    const response = await fetch(request)
-        .then((res) => res.json())
-        .then((result) => Products(result));
-    return response;
+function getDataForProducts() {
+    Promise.all(
+        requestURL.map((uri) => {
+            fetch(uri)
+                .then((res) => res.json())
+                .then((result) => Products(result));
+        })
+    );
 }
 
 function Products(obj) {
     const main = document.querySelector("main");
-    const productListDiv = document.createElement("div");
-    productListDiv.className = "product-list";
     const productList = obj.data.list;
 
     productList.forEach((el) => {
         const productDiv = document.createElement("div");
         productDiv.className = "product-box";
         const calculateSalePrice = el.normalPrice * (el.saleRate / 100);
+
         productDiv.innerHTML += `
-            <img class="product-box--img" src=${el.imageUrl}>
+            <a href=${el.linkUrl} target="_blank">
+                <img class="product-box--img" src=${el.imageUrl}>
+            </a>    
             <p class="product-box--brand-name">${el.brandName}</p>
             <p class="product-box--goods-name">${el.goodsName}<p>
             <div class="product-box--price-info">
@@ -30,11 +32,9 @@ function Products(obj) {
             <p class="product-box saleprice">${calculateSalePrice}</p>
 
         `;
-        productListDiv.appendChild(productDiv);
+        main.appendChild(productDiv);
     });
-
-    main.appendChild(productListDiv);
     console.log(obj.data.list);
 }
 
-export { getData, Products };
+export { Products, getDataForProducts };

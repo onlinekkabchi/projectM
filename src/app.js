@@ -1,20 +1,14 @@
-import { getData } from "./components/products.js";
+import ControlTower from "./controller.js";
 
-function init() {
-    const header = document.querySelector("header");
-    return (header.innerHTML += `<div class="header-menu">
-        <h2 class="header-menu--title">MUSINSA</h2>
-        <div class="header-menu--box">
-            <button class="header-menu--box--btn btn-search">검색</button>
+let joystick = new ControlTower();
 
-            <button class="header-menu--box--btn btn-sale-product">세일상품</button>
-            
-            <button class="header-menu--box--btn btn-only-product">단독상품</button>
-            
-            <button class="header-menu--box--btn btn-include-soldout">품절포함</button>
-        </div>
-    </div>`);
-}
+console.log("searchbtn loaded");
 
-init();
-getData();
+const searchBtn = document.querySelector(".btn-search");
+const saleProductBtn = document.querySelector(".btn-sale-product");
+const onlyProductBtn = document.querySelector(".btn-only-product");
+const includeSoldoutBtn = document.querySelector(".btn-include-soldout");
+
+searchBtn.addEventListener("click", () => {
+    joystick.searchOnOff();
+});
