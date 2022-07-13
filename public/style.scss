@@ -1,0 +1,19 @@
+header{
+    background-color: bisque;
+    position: sticky;
+}
+.header{
+    &-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        &--box--btn{
+            text-align: center;
+            padding: 10px 10px 5px 5px;
+            border-radius: 25px;
+        }
+    }
+
+}

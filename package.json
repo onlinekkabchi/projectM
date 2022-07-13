@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "compile:sass":"sass --watch public/style.scss public/style.css"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19",
+    "sass": "^1.53.0"
+  }
+}
