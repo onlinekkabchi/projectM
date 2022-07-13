@@ -17,20 +17,4 @@ function hideSearchPage() {
     searchPage.remove();
 }
 
-function getDataForSearch() {
-    let dic = [];
-    Promise.all(
-        requestURL.map((uri) => {
-            fetch(uri).then((res) => res.json());
-            // .then(result => );
-        })
-    );
-}
-
-function searchProducts() {
-    const getUserSearchInput = document.querySelector(
-        ".search-page--bar--search-input"
-    ).value;
-}
-
 export { showSearchPage, hideSearchPage };

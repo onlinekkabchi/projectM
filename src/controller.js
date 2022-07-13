@@ -1,22 +1,24 @@
 import init from "./components/init.js";
-import { getDataForProducts } from "./components/products.js";
+import { getDataForProducts } from "./components/products-data.js";
 import { showSearchPage, hideSearchPage } from "./components/header-menu.js";
+import { Dictionary } from "./components/dictionary.js";
 
 export default function ControlTower() {
     this.controlSwitches = {
-        tester: false,
+        searchOnOffSwitch: false,
+        infiniteStone: true,
     };
 }
 
 ControlTower.prototype.init = init();
 ControlTower.prototype.getDataForProducts = getDataForProducts();
 ControlTower.prototype.searchOnOff = function () {
-    if (this.controlSwitches.tester === false) {
+    if (this.controlSwitches.searchOnOffSwitch === false) {
         showSearchPage();
-        return (this.controlSwitches.tester = true);
-    } else if (this.controlSwitches.tester === true) {
+        return (this.controlSwitches.searchOnOffSwitch = true);
+    } else if (this.controlSwitches.searchOnOffSwitch === true) {
         hideSearchPage();
-        return (this.controlSwitches.tester = false);
+        return (this.controlSwitches.searchOnOffSwitch = false);
     } else {
         console.error();
     }

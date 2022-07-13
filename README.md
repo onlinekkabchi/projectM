@@ -6,3 +6,9 @@
 
 [Working with JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
 [fetch multiple urls at the same time](https://stackoverflow.com/questions/59037553/fetch-multiple-urls-at-the-same-time)
+[How to get the heigt of scroll bar using JavaScript?](https://www.geeksforgeeks.org/how-to-get-the-height-of-scroll-bar-using-javascript/)
+
+## Infinite Scroll 관련
+
+[scrollHeight, mdn](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight)
+[Window.pageYOffset, mdn](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset)
