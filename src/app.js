@@ -1,8 +1,7 @@
-import { getData, Product } from "./components/product.js";
-const header = document.querySelector("header");
-const main = document.querySelector("main");
+import { getData } from "./components/products.js";
 
 function init() {
+    const header = document.querySelector("header");
     return (header.innerHTML += `<div class="header-menu">
         <h2 class="header-menu--title">MUSINSA</h2>
         <div class="header-menu--box">
@@ -18,3 +17,4 @@ function init() {
 }
 
 init();
+getData();
