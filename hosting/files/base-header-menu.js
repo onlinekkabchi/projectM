@@ -1,17 +1,18 @@
 import { cutequery } from "./make-cutie-query.js";
 
 function showSearchPage() {
-    const headerMenu = cutequery(".header-menu");
-    const searchPageDiv = document.createElement("div");
-    searchPageDiv.className = "search-page";
-    searchPageDiv.innerHTML += `
-        <div class="search-page-box"
+    const targetBox = cutequery("header");
+    const searchPage = `
+    <div class="search-page">
+    <div class="search-page-box"
         <div class="search-page--bar">
-        <button class="search-page--bar--search-btn-icon">검색</button>
+            <button class="search-page--bar--search-btn-icon">검색</button>
             <input class="search-page--bar--search-input" type="text" placeholder="상품명검색">
         </div>
+        <div class="search-page--result-box"></div>
+    </div>
     `;
-    return headerMenu.appendChild(searchPageDiv);
+    return targetBox.insertAdjacentHTML("afterend", searchPage);
 }
 
 function hideSearchPage() {
