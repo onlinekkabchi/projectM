@@ -1,4 +1,4 @@
-import { cutequery } from "../make-cutie-query.js";
+import { cutequery } from "./make-cutie-query.js";
 
 function showSearchPage() {
     const headerMenu = cutequery(".header-menu");

@@ -1,10 +1,8 @@
-import ControlTower from "./controller.js";
-import { cutequery } from "./components/etc/make-cutie-query.js";
-import {
-    Dictionary,
-    findProductInNewBook,
-} from "./components/search/dictionary.js";
-import infiniteScroll from "./components/etc/infinite-scroll.js";
+import ControlTower from "./control-tower.js";
+import { cutequery } from "./make-cutie-query.js";
+import { Dictionary, findProductInNewBook } from "./dictionary.js";
+import infiniteScroll from "./infinite-scroll.js";
+
 let joystick = new ControlTower();
 
 const main = cutequery("main");

@@ -1,5 +1,5 @@
-import { requestURL } from "../../url/url.js";
-import { cutequery } from "../etc/make-cutie-query.js";
+import { requestURL } from "./url/url.js";
+import { cutequery } from "./make-cutie-query.js";
 
 function Dictionary() {
     this.vocaForProduct = {};
