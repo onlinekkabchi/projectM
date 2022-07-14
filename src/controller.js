@@ -1,7 +1,9 @@
-import init from "./components/init.js";
-import { getDataForProducts } from "./components/products-data.js";
-import { showSearchPage, hideSearchPage } from "./components/header-menu.js";
-import { Dictionary } from "./components/dictionary.js";
+import init from "./components/base-structure/init.js";
+import { drawProductCardVonRequestURL } from "./components/product-card/draw-product-card.js";
+import {
+    showSearchPage,
+    hideSearchPage,
+} from "./components/base-structure/header-menu.js";
 
 export default function ControlTower() {
     this.controlSwitches = {
@@ -11,7 +13,7 @@ export default function ControlTower() {
 }
 
 ControlTower.prototype.init = init();
-ControlTower.prototype.getDataForProducts = getDataForProducts();
+ControlTower.prototype.getDataForProducts = drawProductCardVonRequestURL();
 ControlTower.prototype.searchOnOff = function () {
     if (this.controlSwitches.searchOnOffSwitch === false) {
         showSearchPage();
@@ -23,5 +25,3 @@ ControlTower.prototype.searchOnOff = function () {
         console.error();
     }
 };
-
-console.log("ii");

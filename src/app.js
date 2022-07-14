@@ -1,30 +1,26 @@
 import ControlTower from "./controller.js";
-import { Dictionary } from "./components/dictionary.js";
-import { getDataForProducts } from "./components/products-data.js";
-
+import { cutequery } from "./components/etc/make-cutie-query.js";
+import {
+    Dictionary,
+    findProductInNewBook,
+} from "./components/search/dictionary.js";
+import infiniteScroll from "./components/etc/infinite-scroll.js";
 let joystick = new ControlTower();
 
-console.log("searchbtn loaded");
+const main = cutequery("main");
+const searchBtn = cutequery(".btn-search");
+const saleProductBtn = cutequery(".btn-sale-product");
+const onlyProductBtn = cutequery(".btn-only-product");
+const includeSoldoutBtn = cutequery(".btn-include-soldout");
 
-const main = document.querySelector("main");
-const searchBtn = document.querySelector(".btn-search");
-const saleProductBtn = document.querySelector(".btn-sale-product");
-const onlyProductBtn = document.querySelector(".btn-only-product");
-const includeSoldoutBtn = document.querySelector(".btn-include-soldout");
+searchBtn.addEventListener("click", openDictionary);
+document.addEventListener("scroll", infiniteScroll);
 
-searchBtn.addEventListener("click", () => {
-    joystick.searchOnOff();
+function openDictionary() {
+    joystick.searchOnOff(); // 검색창을 열고 닫는 기능. 검색창이 열려있을 경우 joystick 내의 객체로 된 스위치가 true로 바뀌며 검색기능이 활성화 됨.
     if (joystick.controlSwitches.searchOnOffSwitch === true) {
-        let newBook = new Dictionary();
+        const newBook = new Dictionary();
+        const newBookForProductInfo = newBook.vocaForProduct;
+        findProductInNewBook(newBookForProductInfo);
     }
-});
-document.addEventListener("scroll", () => {
-    const fullHeight = main.scrollHeight;
-    const userPositionHeight = window.scrollY;
-    console.log(fullHeight);
-    console.log(userPositionHeight);
-    if (fullHeight - userPositionHeight < 1100) {
-        console.log("scroll");
-        getDataForProducts();
-    }
-});
+}

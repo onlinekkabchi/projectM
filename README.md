@@ -12,3 +12,7 @@
 
 [scrollHeight, mdn](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight)
 [Window.pageYOffset, mdn](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset)
+
+## 검색 관련
+
+[intersection of two arrays by partial matches](https://stackoverflow.com/questions/56251223/intersection-of-two-arrays-by-partial-matches)

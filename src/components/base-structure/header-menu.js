@@ -1,5 +1,7 @@
+import { cutequery } from "../make-cutie-query.js";
+
 function showSearchPage() {
-    const headerMenu = document.querySelector(".header-menu");
+    const headerMenu = cutequery(".header-menu");
     const searchPageDiv = document.createElement("div");
     searchPageDiv.className = "search-page";
     searchPageDiv.innerHTML += `
@@ -13,7 +15,7 @@ function showSearchPage() {
 }
 
 function hideSearchPage() {
-    const searchPage = document.querySelector(".search-page");
+    const searchPage = cutequery(".search-page");
     searchPage.remove();
 }
 

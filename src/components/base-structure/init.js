@@ -1,6 +1,6 @@
 export default function init() {
-    const main = document.querySelector("main");
-    return (main.innerHTML += `<div class="header-menu">
+    const header = document.querySelector("header");
+    return (header.innerHTML += `<div class="header-menu">
         <h2 class="header-menu--title">MUSINSA</h2>
         <div class="header-menu--box">
             <button class="header-menu--box--btn btn-search">검색</button>
