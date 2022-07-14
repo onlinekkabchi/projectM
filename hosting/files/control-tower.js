@@ -1,9 +1,6 @@
-import init from "./components/base-structure/init.js";
-import { drawProductCardVonRequestURL } from "./components/product-card/draw-product-card.js";
-import {
-    showSearchPage,
-    hideSearchPage,
-} from "./components/base-structure/header-menu.js";
+import init from "./base-init.js";
+import { drawProductCardVonRequestURL } from "./product-card-draw.js";
+import { showSearchPage, hideSearchPage } from "./base-header-menu.js";
 
 export default function ControlTower() {
     this.controlSwitches = {
