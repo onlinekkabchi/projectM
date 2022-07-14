@@ -37,9 +37,8 @@ function findProductInNewBook(infos) {
                 ? usersExpectedChoice.push(key)
                 : "";
         }
-        console.log(usersExpectedChoice);
         return usersExpectedChoice;
     });
 }
 
-export { findWord, findProductInNewBook, Dictionary };
+export { findProductInNewBook, Dictionary };
