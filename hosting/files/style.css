@@ -1,12 +1,13 @@
 .search-page {
   transition: 0.3s;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: white;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid;
 }
 .search-page-box {
   width: 100%;
@@ -16,9 +17,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px 0 10px 0;
-  margin: 0px;
-  border-bottom: 2px solid;
-  border-color: #bebebe;
+  margin: 0 0 2px 0px;
 }
 .search-page--result-box {
   background-color: rgba(0, 0, 0, 0.5);
@@ -179,7 +178,6 @@ header {
 
 main {
   background-color: white;
-  border: #898989 1px solid;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

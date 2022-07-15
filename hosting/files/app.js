@@ -5,7 +5,6 @@ import infiniteScroll from "./infinite-scroll.js";
 
 let joystick = new ControlTower();
 
-const main = cutequery("main");
 const searchBtn = cutequery(".btn-search");
 const saleProductBtn = cutequery(".btn-sale-product");
 const musinsaOnlyProductBtn = cutequery(".btn-only-product");
