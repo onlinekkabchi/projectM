@@ -1,6 +1,4 @@
 .search-page {
-  position: absolute;
-  top: 200px;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: auto;
@@ -62,6 +60,7 @@
   border-color: #bebebe;
 }
 .product-card--kauf-box {
+  height: 35px;
   display: flex;
   flex-direction: column;
 }
@@ -90,6 +89,23 @@
   display: block;
 }
 .is-sold-out--false {
+  display: none;
+}
+
+.is-sale--true {
+  color: brown;
+  font-size: 14px;
+  font-weight: 800;
+}
+.is-sale--false {
+  display: none;
+}
+
+.saleprice--true {
+  color: #6f6f6f;
+  font-weight: 600;
+}
+.saleprice--false {
   display: none;
 }
 

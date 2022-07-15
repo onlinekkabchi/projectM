@@ -1,4 +1,4 @@
-import { cutequery } from "./make-cutie-query.js";
+import { cutequery, allcutequery } from "./make-cutie-query.js";
 
 function showSearchPage() {
     const targetBox = cutequery("header");
@@ -20,4 +20,14 @@ function hideSearchPage() {
     searchPage.remove();
 }
 
-export { showSearchPage, hideSearchPage };
+function showOnlySaleProduct() {
+    const saleProducts = allcutequery(".is-sale--true");
+    const main = cutequery("main");
+    main.innerHTML = "";
+    saleProducts.forEach((element) => {
+        main.appendChild(element.parentNode.parentNode);
+        console.log(element.parentNode.parentNode);
+    });
+}
+
+export { showSearchPage, hideSearchPage, showOnlySaleProduct };

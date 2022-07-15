@@ -11,7 +11,7 @@ function Dictionary() {
 }
 
 Dictionary.prototype.findProductInDictionary = function (usersval) {
-    const searchPageResultBox = cutequery(".search-page--result-box");
+    const searchPageResultBox = cutequery("main");
     searchPageResultBox.innerHTML = "";
     const keys = Object.keys(localStorage);
     let len = keys.length;

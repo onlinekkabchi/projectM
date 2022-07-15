@@ -3,17 +3,19 @@ import { cutequery } from "./make-cutie-query.js";
 import { Dictionary } from "./dictionary.js";
 import infiniteScroll from "./infinite-scroll.js";
 
+import { showOnlySaleProduct } from "./base-header-menu.js";
+
 let joystick = new ControlTower();
 
 const main = cutequery("main");
 const searchBtn = cutequery(".btn-search");
 const saleProductBtn = cutequery(".btn-sale-product");
-const onlyProductBtn = cutequery(".btn-only-product");
+const musinsaOnlyProductBtn = cutequery(".btn-only-product");
 const includeSoldoutBtn = cutequery(".btn-include-soldout");
 
 searchBtn.addEventListener("click", openDictionary);
-saleProductBtn.addEventListener("click", () => {});
-onlyProductBtn.addEventListener("click", () => {});
+saleProductBtn.addEventListener("click", showOnlySaleProduct);
+musinsaOnlyProductBtn.addEventListener("click", () => {});
 document.addEventListener("scroll", infiniteScroll);
 
 function openDictionary() {

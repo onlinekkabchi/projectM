@@ -33,6 +33,7 @@
             border-color: $--light-gray3;
         }
         &--kauf-box{
+            height: 35px;
             display:flex;
             flex-direction: column;
         }
@@ -66,6 +67,25 @@
 .is-sold-out{
     &--true{
         display: block;
+    }
+    &--false{
+        display: none;
+    }
+}
+.is-sale{
+    &--true{
+        color: brown;
+        font-size: 14px;
+        font-weight: 800;
+    }
+    &--false{
+        display:none;
+    }
+}
+.saleprice{
+    &--true{
+        color: $--gray1;
+        font-weight: 600;
     }
     &--false{
         display: none;

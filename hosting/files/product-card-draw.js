@@ -22,15 +22,4 @@ function drawProductCardVonRequestURL() {
     return;
 }
 
-function drawProductCardVonUserChoice(usersExpectedChoice) {
-    const searchPageResultBox = cutequery(".search-page--result-box");
-    searchPageResultBox.innerHTML = "";
-    usersExpectedChoice
-        .map((e) => window.localStorage.getItem(e))
-        .forEach((el) =>
-            CreateProductCard(JSON.parse(el), searchPageResultBox)
-        );
-    return;
-}
-
-export { drawProductCardVonRequestURL, drawProductCardVonUserChoice };
+export { drawProductCardVonRequestURL };

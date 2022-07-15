@@ -21,7 +21,7 @@ function CreateProductCard(el, targetBox) {
             <p class="product-card--price--normal-price">${el.normalPrice}</p>
             <p class="product-card--price--sale-rate is-sale--${el.isSale}">${el.saleRate}%</p>
         </div>
-        <p class="product-card--price-saleprice saleprice">${calculateSalePrice}</p>
+        <p class="product-card--price-saleprice saleprice--${el.isSale}">${calculateSalePrice}</p>
         
 
     `;
