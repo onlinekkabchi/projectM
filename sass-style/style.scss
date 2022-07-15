@@ -45,21 +45,24 @@ header{
             display: flex;
             flex-direction: row;
             &--btn{
-                background-color: transparent;
                 font-size: 12px;
                 text-align: center;
                 padding: 10px 10px 10px 10px;
                 border: #a3a3a3 1px solid;
                 border-radius: 20px;
                 margin: 3px;
+                cursor: pointer;
             }
         }
     }
 
 }
+.btn--clicked{
+    color:white;
+    background-color: black;
+}
 main{
     background-color: white;
-    border: #898989 1px solid;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

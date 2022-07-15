@@ -22,15 +22,16 @@ function drawProductCardVonRequestURL() {
     return;
 }
 
-function findProductCardVonUserChoice(usersExpectedChoice) {
-    const searchPageResultBox = cutequery(".search-page--result-box");
-    searchPageResultBox.innerHTML = "";
-    usersExpectedChoice
-        .map((e) => window.localStorage.getItem(e))
-        .forEach((el) =>
-            CreateProductCard(JSON.parse(el), searchPageResultBox)
-        );
-    return;
+function drawProductCardVonLocalStorage() {
+    const main = cutequery("main");
+    const keys = Object.keys(localStorage);
+    let len = keys.length;
+    main.innerHTML = "";
+
+    while (len--) {
+        const ProductInfo = JSON.parse(localStorage.getItem(keys[len]));
+        CreateProductCard(ProductInfo, main);
+    }
 }
 
-export { drawProductCardVonRequestURL, findProductCardVonUserChoice };
+export { drawProductCardVonRequestURL, drawProductCardVonLocalStorage };

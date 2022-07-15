@@ -22,27 +22,43 @@
             &-saleprice{
                 margin: 0;
             }
+            &--normal-price{
+                font-size: 13px;
+            }
         }
         &--brand-name{
-            width: 100px;
+            width:100px;
             text-align: center;
-            color: #000000;
-            padding: 3px;
+            padding: 5px;
+            color: $--light-gray1;
             border: 1px solid;
             border-radius: 15px;
             border-color: $--light-gray3;
         }
         &--kauf-box{
+            height: 35px;
             display:flex;
-            flex-direction: column;
+            flex-direction: row;
         }
         &--kauf-info{
-            width: 30px;
-            text-align: center;
-            padding: 5px;
-            margin: 1px;
-            border: 1px solid;
-            border-radius: 15px;
+            &--only{
+                width: 30px;
+                height:18px;
+                text-align: center;
+                padding: 5px;
+                margin: 1px;
+                color: white;
+                background-color: rgb(72, 145, 120);
+            }
+            &--soldout{
+                width: 30px;
+                height:18px;
+                text-align: center;
+                padding: 5px;
+                margin: 1px;
+                color: white;
+                background-color: rgb(109, 0, 0);
+            }
         }
     }
 
@@ -51,5 +67,40 @@
 .sold-out{
     &--true{
         display: none;
+    }
+}
+.is-sold-out{
+    &--true{
+        display: block;
+    }
+    &--false{
+        display: none;
+    }
+}
+.is-sale{
+    &--true{
+        color: brown;
+        font-size: 13px;
+        font-weight: 700;
+    }
+    &--false{
+        display:none;
+    }
+}
+.saleprice{
+    &--true{
+        color: $--light-gray2;
+        font-size: 13px;
+    }
+    &--false{
+        display: none;
+    }
+}
+.is-exclusive{
+    &--true{
+        display:block;
+    }
+    &--false{
+        display:none;
     }
 }

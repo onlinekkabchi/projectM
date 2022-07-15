@@ -1,13 +1,13 @@
 .search-page {
-  position: absolute;
-  top: 200px;
-  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  background-color: white;
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid;
 }
 .search-page-box {
   width: 100%;
@@ -17,13 +17,12 @@
   justify-content: center;
   align-items: center;
   padding: 10px 0 10px 0;
-  margin: 0px;
-  border-bottom: 2px solid;
-  border-color: #bebebe;
+  margin: 0 0 2px 0px;
 }
 .search-page--result-box {
-  background-color: #898989;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   padding-top: 5px;
 }
@@ -51,29 +50,74 @@
 .product-card--price-saleprice {
   margin: 0;
 }
+.product-card--price--normal-price {
+  font-size: 13px;
+}
 .product-card--brand-name {
   width: 100px;
   text-align: center;
-  color: #000000;
-  padding: 3px;
+  padding: 5px;
+  color: #898989;
   border: 1px solid;
   border-radius: 15px;
   border-color: #bebebe;
 }
 .product-card--kauf-box {
+  height: 35px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
-.product-card--kauf-info {
+.product-card--kauf-info--only {
   width: 30px;
+  height: 18px;
   text-align: center;
   padding: 5px;
   margin: 1px;
-  border: 1px solid;
-  border-radius: 15px;
+  color: white;
+  background-color: rgb(72, 145, 120);
+}
+.product-card--kauf-info--soldout {
+  width: 30px;
+  height: 18px;
+  text-align: center;
+  padding: 5px;
+  margin: 1px;
+  color: white;
+  background-color: rgb(109, 0, 0);
 }
 
 .sold-out--true {
+  display: none;
+}
+
+.is-sold-out--true {
+  display: block;
+}
+.is-sold-out--false {
+  display: none;
+}
+
+.is-sale--true {
+  color: brown;
+  font-size: 13px;
+  font-weight: 700;
+}
+.is-sale--false {
+  display: none;
+}
+
+.saleprice--true {
+  color: #a3a3a3;
+  font-size: 13px;
+}
+.saleprice--false {
+  display: none;
+}
+
+.is-exclusive--true {
+  display: block;
+}
+.is-exclusive--false {
   display: none;
 }
 
@@ -118,18 +162,22 @@ header {
   flex-direction: row;
 }
 .header-menu--box--btn {
-  background-color: transparent;
   font-size: 12px;
   text-align: center;
   padding: 10px 10px 10px 10px;
   border: #a3a3a3 1px solid;
   border-radius: 20px;
   margin: 3px;
+  cursor: pointer;
+}
+
+.btn--clicked {
+  color: white;
+  background-color: black;
 }
 
 main {
   background-color: white;
-  border: #898989 1px solid;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
