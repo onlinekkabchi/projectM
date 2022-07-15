@@ -45,7 +45,6 @@ header{
             display: flex;
             flex-direction: row;
             &--btn{
-                background-color: transparent;
                 font-size: 12px;
                 text-align: center;
                 padding: 10px 10px 10px 10px;
@@ -55,14 +54,12 @@ header{
                 cursor: pointer;
             }
         }
-        &--filter-btn{
-            &--clicked{
-                background-color: #000000;
-                color: white;
-            }
-        }
     }
 
+}
+.btn--clicked{
+    color:white;
+    background-color: black;
 }
 main{
     background-color: white;

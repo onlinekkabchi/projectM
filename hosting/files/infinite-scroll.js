@@ -5,7 +5,7 @@ export default function infiniteScroll() {
     const fullHeight = main.scrollHeight;
     const userPositionHeight = window.scrollY;
     console.log("scroll");
-    if (fullHeight - userPositionHeight < 1500) {
+    if (fullHeight - userPositionHeight < 800) {
         drawProductCardVonRequestURL();
     }
 }

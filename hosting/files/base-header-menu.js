@@ -44,9 +44,25 @@ function showMusinsaOnlyProduct() {
 
 function showAllProductIncludeNotMusinsaOnly() {
     const musinsaOnlyProducts = allcutequery(".is-exclusive--false");
-    musinsaOnlyProducts.forEach(
-        (el) => (el.parentNode.parentNode.style.display = "display")
-    );
+    musinsaOnlyProducts.forEach((el) => {
+        el.parentNode.classList.contains("check-sold-out--false")
+            ? (el.parentNode.parentNode.style.display = "block")
+            : "";
+    });
+}
+
+function showSoldOutProduct() {
+    const soldOutProducts = allcutequery(".sold-out--true");
+    soldOutProducts.forEach((el) => {
+        el.style.display = "block";
+    });
+}
+
+function hideSoldOutProduct() {
+    const soldOutProducts = allcutequery(".sold-out--true");
+    soldOutProducts.forEach((el) => {
+        el.style.display = "none";
+    });
 }
 
 export {
@@ -56,4 +72,6 @@ export {
     hideOnlySaleProduct,
     showMusinsaOnlyProduct,
     showAllProductIncludeNotMusinsaOnly,
+    showSoldOutProduct,
+    hideSoldOutProduct,
 };

@@ -22,12 +22,15 @@
             &-saleprice{
                 margin: 0;
             }
+            &--normal-price{
+                font-size: 13px;
+            }
         }
         &--brand-name{
-            width: 100px;
+            width:100px;
             text-align: center;
-            color: #000000;
-            padding: 3px;
+            padding: 5px;
+            color: $--light-gray1;
             border: 1px solid;
             border-radius: 15px;
             border-color: $--light-gray3;
@@ -35,11 +38,12 @@
         &--kauf-box{
             height: 35px;
             display:flex;
-            flex-direction: column;
+            flex-direction: row;
         }
         &--kauf-info{
             &--only{
                 width: 30px;
+                height:18px;
                 text-align: center;
                 padding: 5px;
                 margin: 1px;
@@ -48,6 +52,7 @@
             }
             &--soldout{
                 width: 30px;
+                height:18px;
                 text-align: center;
                 padding: 5px;
                 margin: 1px;
@@ -75,8 +80,8 @@
 .is-sale{
     &--true{
         color: brown;
-        font-size: 14px;
-        font-weight: 800;
+        font-size: 13px;
+        font-weight: 700;
     }
     &--false{
         display:none;
@@ -84,8 +89,8 @@
 }
 .saleprice{
     &--true{
-        color: $--gray1;
-        font-weight: 600;
+        color: $--light-gray2;
+        font-size: 13px;
     }
     &--false{
         display: none;

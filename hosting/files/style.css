@@ -1,4 +1,5 @@
 .search-page {
+  transition: 0.3s;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: auto;
@@ -50,11 +51,14 @@
 .product-card--price-saleprice {
   margin: 0;
 }
+.product-card--price--normal-price {
+  font-size: 13px;
+}
 .product-card--brand-name {
   width: 100px;
   text-align: center;
-  color: #000000;
-  padding: 3px;
+  padding: 5px;
+  color: #898989;
   border: 1px solid;
   border-radius: 15px;
   border-color: #bebebe;
@@ -62,10 +66,11 @@
 .product-card--kauf-box {
   height: 35px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .product-card--kauf-info--only {
   width: 30px;
+  height: 18px;
   text-align: center;
   padding: 5px;
   margin: 1px;
@@ -74,6 +79,7 @@
 }
 .product-card--kauf-info--soldout {
   width: 30px;
+  height: 18px;
   text-align: center;
   padding: 5px;
   margin: 1px;
@@ -94,16 +100,16 @@
 
 .is-sale--true {
   color: brown;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 700;
 }
 .is-sale--false {
   display: none;
 }
 
 .saleprice--true {
-  color: #6f6f6f;
-  font-weight: 600;
+  color: #a3a3a3;
+  font-size: 13px;
 }
 .saleprice--false {
   display: none;
@@ -157,7 +163,6 @@ header {
   flex-direction: row;
 }
 .header-menu--box--btn {
-  background-color: transparent;
   font-size: 12px;
   text-align: center;
   padding: 10px 10px 10px 10px;
@@ -166,9 +171,10 @@ header {
   margin: 3px;
   cursor: pointer;
 }
-.header-menu--filter-btn--clicked {
-  background-color: #000000;
+
+.btn--clicked {
   color: white;
+  background-color: black;
 }
 
 main {

@@ -1,5 +1,8 @@
 import init from "./base-init.js";
-import { drawProductCardVonRequestURL } from "./product-card-draw.js";
+import {
+    drawProductCardVonRequestURL,
+    drawProductCardVonLocalStorage,
+} from "./product-card-draw.js";
 import {
     showSearchPage,
     hideSearchPage,
@@ -7,6 +10,8 @@ import {
     hideOnlySaleProduct,
     showMusinsaOnlyProduct,
     showAllProductIncludeNotMusinsaOnly,
+    showSoldOutProduct,
+    hideSoldOutProduct,
 } from "./base-header-menu.js";
 
 export default function ControlTower() {
@@ -19,14 +24,15 @@ export default function ControlTower() {
     };
 }
 
-ControlTower.prototype.init = init();
-ControlTower.prototype.getDataForProducts = drawProductCardVonRequestURL();
+ControlTower.prototype.init = init(); // 첫 화면 구성.
+ControlTower.prototype.getDataForProducts = drawProductCardVonRequestURL(); // 최초 데이터를 받음.
 ControlTower.prototype.searchOnOff = function () {
     if (this.controlSwitches.searchOnOffSwitch === false) {
         showSearchPage();
         return (this.controlSwitches.searchOnOffSwitch = true);
     } else if (this.controlSwitches.searchOnOffSwitch === true) {
         hideSearchPage();
+        drawProductCardVonLocalStorage();
         return (this.controlSwitches.searchOnOffSwitch = false);
     } else {
         console.error();
@@ -50,6 +56,17 @@ ControlTower.prototype.musinsaOnlyProductOnOff = function () {
     } else if (this.controlSwitches.musinsaOnlyProductSwitch === true) {
         showAllProductIncludeNotMusinsaOnly();
         return (this.controlSwitches.musinsaOnlyProductSwitch = false);
+    } else {
+        console.error();
+    }
+};
+ControlTower.prototype.soldOutProductOnOff = function () {
+    if (this.controlSwitches.includeSoldOutProductSwitch === false) {
+        showSoldOutProduct();
+        return (this.controlSwitches.includeSoldOutProductSwitch = true);
+    } else if (this.controlSwitches.includeSoldOutProductSwitch === true) {
+        hideSoldOutProduct();
+        return (this.controlSwitches.includeSoldOutProductSwitch = false);
     } else {
         console.error();
     }

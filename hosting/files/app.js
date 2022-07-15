@@ -13,11 +13,19 @@ const includeSoldoutBtn = cutequery(".btn-include-soldout");
 
 searchBtn.addEventListener("click", () => {
     joystick.searchOnOff();
+    searchBtn.classList.toggle("btn--clicked");
     const newBook = new Dictionary(); // 검색바 열림
 });
-saleProductBtn.addEventListener("click", () => joystick.saleProductOnOff());
-musinsaOnlyProductBtn.addEventListener("click", () =>
-    joystick.musinsaOnlyProductOnOff()
-);
-includeSoldoutBtn.addEventListener("click", () => {});
+saleProductBtn.addEventListener("click", () => {
+    joystick.saleProductOnOff();
+    saleProductBtn.classList.toggle("btn--clicked");
+});
+musinsaOnlyProductBtn.addEventListener("click", () => {
+    joystick.musinsaOnlyProductOnOff();
+    musinsaOnlyProductBtn.classList.toggle("btn--clicked");
+});
+includeSoldoutBtn.addEventListener("click", () => {
+    joystick.soldOutProductOnOff();
+    includeSoldoutBtn.classList.toggle("btn--clicked");
+});
 document.addEventListener("scroll", infiniteScroll);

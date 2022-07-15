@@ -22,4 +22,16 @@ function drawProductCardVonRequestURL() {
     return;
 }
 
-export { drawProductCardVonRequestURL };
+function drawProductCardVonLocalStorage() {
+    const main = cutequery("main");
+    const keys = Object.keys(localStorage);
+    let len = keys.length;
+    main.innerHTML = "";
+
+    while (len--) {
+        const ProductInfo = JSON.parse(localStorage.getItem(keys[len]));
+        CreateProductCard(ProductInfo, main);
+    }
+}
+
+export { drawProductCardVonRequestURL, drawProductCardVonLocalStorage };
