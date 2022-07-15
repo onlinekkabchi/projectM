@@ -18,12 +18,14 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-            }
-            &-saleprice{
-                margin: 0;
+                align-items: center;
+                padding: 2px;
             }
             &--normal-price{
-                font-size: 13px;
+                font-size: 15px;
+            }
+            &-sale-price{
+                font-size:15px;
             }
         }
         &--brand-name{
@@ -88,12 +90,14 @@
     }
 }
 .saleprice{
-    &--true{
-        color: $--light-gray2;
-        font-size: 13px;
-    }
     &--false{
         display: none;
+    }
+}
+.normalprice{
+    &--true{
+        color: $--light-gray3;
+        text-decoration: line-through;
     }
 }
 .is-exclusive{

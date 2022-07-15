@@ -1,8 +1,7 @@
 function CreateProductCard(el, targetBox) {
     const productCard = document.createElement("div");
     productCard.className = `product-card sold-out--${el.isSoldOut}`;
-    const calculateSalePrice = Math.floor(el.normalPrice * (el.saleRate / 100));
-
+    const calculateSalePrice = (el.normalPrice * (100 - el.saleRate)) / 100;
     productCard.innerHTML += `
         <div class="product-card--goods-info-box">
             <a href=${el.linkUrl} target="_blank">
@@ -18,11 +17,10 @@ function CreateProductCard(el, targetBox) {
             <p class="product-card--kauf-info--soldout is-sold-out--${el.isSoldOut}">품절</p>
         </div>
         <div class="product-card--price-info ">
-            <p class="product-card--price--normal-price">${el.normalPrice}</p>
+            <p class="product-card--price-sale-price saleprice--${el.isSale}">${calculateSalePrice}원</p>
             <p class="product-card--price--sale-rate is-sale--${el.isSale}">${el.saleRate}%</p>
         </div>
-        <p class="product-card--price-saleprice saleprice--${el.isSale}">${calculateSalePrice}</p>
-        
+            <p class="product-card--price--normal-price normalprice--${el.isSale}">${el.normalPrice}원</p>
 
     `;
 

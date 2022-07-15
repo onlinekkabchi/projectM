@@ -46,12 +46,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-.product-card--price-saleprice {
-  margin: 0;
+  align-items: center;
+  padding: 2px;
 }
 .product-card--price--normal-price {
-  font-size: 13px;
+  font-size: 15px;
+}
+.product-card--price-sale-price {
+  font-size: 15px;
 }
 .product-card--brand-name {
   width: 100px;
@@ -106,12 +108,13 @@
   display: none;
 }
 
-.saleprice--true {
-  color: #a3a3a3;
-  font-size: 13px;
-}
 .saleprice--false {
   display: none;
+}
+
+.normalprice--true {
+  color: #bebebe;
+  text-decoration: line-through;
 }
 
 .is-exclusive--true {

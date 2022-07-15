@@ -13,6 +13,7 @@ import {
     showSoldOutProduct,
     hideSoldOutProduct,
 } from "./base-header-menu.js";
+import Tagging from "./tagging.js";
 
 export default function ControlTower() {
     this.controlSwitches = {
