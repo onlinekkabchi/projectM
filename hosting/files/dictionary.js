@@ -47,7 +47,9 @@ function findProductInNewBook(infos) {
     const userInput = cutequery(".search-page--bar--search-input");
     userInput.addEventListener("keyup", (e) => {
         console.log(userInput.value);
-
+        if (userInput.value.length < 1) {
+            return;
+        }
         const valArr = [e.target.value.toUpperCase()];
         let usersExpectedChoice = [];
 

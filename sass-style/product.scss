@@ -1,12 +1,16 @@
 .product{
-    &-box{
-        width: 220px;
+    &-card{
+        width: 180px;
+        height: 460px;
         padding: 0;
-        margin:5px;
+        margin:10px;
         font-size: 12px;
+        &--goods-info-box{
+            height: 335px;
+        }
         &--img{
-            width: 220px;
-            height: 270px;
+            width: 180px;
+            height: 230px;
         }
         &--price{
             &-info{
@@ -15,7 +19,37 @@
                 flex-direction: row;
                 justify-content: space-between;
             }
+            &-saleprice{
+                margin: 0;
+            }
+        }
+        &--brand-name{
+            width: 100px;
+            text-align: center;
+            color: #000000;
+            padding: 3px;
+            border: 1px solid;
+            border-radius: 15px;
+            border-color: $--light-gray3;
+        }
+        &--kauf-box{
+            display:flex;
+            flex-direction: column;
+        }
+        &--kauf-info{
+            width: 30px;
+            text-align: center;
+            padding: 5px;
+            margin: 1px;
+            border: 1px solid;
+            border-radius: 15px;
         }
     }
 
+}
+
+.sold-out{
+    &--true{
+        display: none;
+    }
 }
