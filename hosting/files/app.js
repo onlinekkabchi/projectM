@@ -3,8 +3,6 @@ import { cutequery } from "./make-cutie-query.js";
 import { Dictionary } from "./dictionary.js";
 import infiniteScroll from "./infinite-scroll.js";
 
-import { showOnlySaleProduct } from "./base-header-menu.js";
-
 let joystick = new ControlTower();
 
 const main = cutequery("main");
@@ -13,14 +11,13 @@ const saleProductBtn = cutequery(".btn-sale-product");
 const musinsaOnlyProductBtn = cutequery(".btn-only-product");
 const includeSoldoutBtn = cutequery(".btn-include-soldout");
 
-searchBtn.addEventListener("click", openDictionary);
-saleProductBtn.addEventListener("click", showOnlySaleProduct);
-musinsaOnlyProductBtn.addEventListener("click", () => {});
+searchBtn.addEventListener("click", () => {
+    joystick.searchOnOff();
+    const newBook = new Dictionary(); // 검색바 열림
+});
+saleProductBtn.addEventListener("click", () => joystick.saleProductOnOff());
+musinsaOnlyProductBtn.addEventListener("click", () =>
+    joystick.musinsaOnlyProductOnOff()
+);
+includeSoldoutBtn.addEventListener("click", () => {});
 document.addEventListener("scroll", infiniteScroll);
-
-function openDictionary() {
-    joystick.searchOnOff(); // 검색창을 열고 닫는 기능. 검색창이 열려있을 경우 joystick 내의 객체로 된 스위치가 true로 바뀌며 검색기능이 활성화 됨.
-    if (joystick.controlSwitches.searchOnOffSwitch === true) {
-        const newBook = new Dictionary();
-    }
-}
