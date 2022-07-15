@@ -23,30 +23,6 @@ function drawProductCardVonRequestURL() {
 }
 
 function findProductCardVonUserChoice(usersExpectedChoice) {
-    // let numbering = usersExpectedChoice.map(Number);
-
-    // Promise.all(
-    //     requestURL.map((uri) => {
-    //         fetch(uri)
-    //             .then((res) => res.json())
-    //             .then((obj) => {
-    //                 const searchPageResultBox = cutequery(
-    //                     ".search-page--result-box"
-    //                 );
-    //                 searchPageResultBox.innerHTML = "";
-
-    //                 obj.data.list.filter(function (item) {
-    //                     const jud = numbering.find(
-    //                         (e) => e === item["goodsNo"]
-    //                     );
-    //                     return jud
-    //                         ? CreateProductCard(item, searchPageResultBox)
-    //                         : "";
-    //                 });
-    //             });
-    //     })
-    // );
-
     const searchPageResultBox = cutequery(".search-page--result-box");
     searchPageResultBox.innerHTML = "";
     const usersChoiceList = usersExpectedChoice
