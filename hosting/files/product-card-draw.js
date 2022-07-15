@@ -10,12 +10,12 @@ function drawProductCardVonRequestURL() {
                 .then((res) => res.json())
                 .then((obj) => {
                     obj.data.list.forEach((el) => CreateProductCard(el, main));
-                    obj.data.list.forEach((el) =>
+                    obj.data.list.forEach((el) => {
                         window.localStorage.setItem(
                             el["goodsNo"],
                             JSON.stringify(el)
-                        )
-                    );
+                        );
+                    });
                 });
         })
     );
@@ -25,7 +25,7 @@ function drawProductCardVonRequestURL() {
 function findProductCardVonUserChoice(usersExpectedChoice) {
     const searchPageResultBox = cutequery(".search-page--result-box");
     searchPageResultBox.innerHTML = "";
-    const usersChoiceList = usersExpectedChoice
+    usersExpectedChoice
         .map((e) => window.localStorage.getItem(e))
         .forEach((el) =>
             CreateProductCard(JSON.parse(el), searchPageResultBox)
