@@ -22,7 +22,7 @@ function drawProductCardVonRequestURL() {
     return;
 }
 
-function findProductCardVonUserChoice(usersExpectedChoice) {
+function drawProductCardVonUserChoice(usersExpectedChoice) {
     const searchPageResultBox = cutequery(".search-page--result-box");
     searchPageResultBox.innerHTML = "";
     usersExpectedChoice
@@ -33,4 +33,4 @@ function findProductCardVonUserChoice(usersExpectedChoice) {
     return;
 }
 
-export { drawProductCardVonRequestURL, findProductCardVonUserChoice };
+export { drawProductCardVonRequestURL, drawProductCardVonUserChoice };

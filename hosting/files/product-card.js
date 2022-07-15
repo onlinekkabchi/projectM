@@ -14,8 +14,8 @@ function CreateProductCard(el, targetBox) {
             <p class="product-card--goods-name">${el.goodsName}</p>
         </div>
         <div class="product-card--kauf-box">
-            <p class="product-card--kauf-info is-exclusive--${el.isExclusive}">단독</p>
-            <p class="product-card--kauf-info is-sold-out--${el.isSoldOut}">품절</p>
+            <p class="product-card--kauf-info--only is-exclusive--${el.isExclusive}">단독</p>
+            <p class="product-card--kauf-info--soldout is-sold-out--${el.isSoldOut}">품절</p>
         </div>
         <div class="product-card--price-info">
             <p class="product-card--price--normal-price">${el.normalPrice}</p>

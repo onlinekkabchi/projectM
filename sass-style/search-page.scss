@@ -26,8 +26,9 @@ $--light-gray3:#bebebe;
 
     }
     &--result-box{
-        background-color: $--light-gray1;
+        background-color: rgba(0,0,0, 0.5);
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         padding-top: 5px;
     }

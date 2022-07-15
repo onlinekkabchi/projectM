@@ -52,6 +52,13 @@ header{
                 border: #a3a3a3 1px solid;
                 border-radius: 20px;
                 margin: 3px;
+                cursor: pointer;
+            }
+        }
+        &--filter-btn{
+            &--clicked{
+                background-color: #000000;
+                color: white;
             }
         }
     }

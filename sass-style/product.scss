@@ -37,12 +37,22 @@
             flex-direction: column;
         }
         &--kauf-info{
-            width: 30px;
-            text-align: center;
-            padding: 5px;
-            margin: 1px;
-            border: 1px solid;
-            border-radius: 15px;
+            &--only{
+                width: 30px;
+                text-align: center;
+                padding: 5px;
+                margin: 1px;
+                color: white;
+                background-color: rgb(72, 145, 120);
+            }
+            &--soldout{
+                width: 30px;
+                text-align: center;
+                padding: 5px;
+                margin: 1px;
+                color: white;
+                background-color: rgb(109, 0, 0);
+            }
         }
     }
 
@@ -51,5 +61,21 @@
 .sold-out{
     &--true{
         display: none;
+    }
+}
+.is-sold-out{
+    &--true{
+        display: block;
+    }
+    &--false{
+        display: none;
+    }
+}
+.is-exclusive{
+    &--true{
+        display:block;
+    }
+    &--false{
+        display:none;
     }
 }

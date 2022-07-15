@@ -1,65 +1,33 @@
-import { requestURL } from "./url.js";
 import { cutequery } from "./make-cutie-query.js";
-import { findProductCardVonUserChoice } from "./product-card-draw.js";
+import CreateProductCard from "./product-card.js";
 
 function Dictionary() {
-    this.vocaForProduct = {};
-
-    const arrangeVoca = (txt) => {
-        txt.data.list.map((el) => {
-            const goodsNr = el["goodsNo"];
-            this.vocaForProduct[goodsNr] = [el["goodsName"], el["brandName"]];
-        });
-    };
-
-    Promise.all(
-        requestURL.map((uri) => {
-            fetch(uri)
-                .then((res) => res.json())
-                .then((result) => arrangeVoca(result));
-        })
-    );
-}
-
-function findWord(users, dicts) {
-    let rez = dicts.filter((item) =>
-        users.some((str) => item.toUpperCase().includes(str))
-    );
-    return rez.length;
-}
-
-function writeSearchResultInNewBook(list, targetBox) {
-    const searchResultList = cutequery(targetBox);
-    searchResultList.innerHTML = `<div class="search-page--result-box"></div>`;
-
-    const listBoxTemplate = (el) => {
-        const card = document.createElement("div");
-        card.className = "search-result-card";
-        card.innerHTML += `<p>${el}</p>`;
-        return card;
-    };
-    return list.map((product) => {
-        searchResultList.appendChild(listBoxTemplate(product));
-    });
-}
-
-function findProductInNewBook(infos) {
     const userInput = cutequery(".search-page--bar--search-input");
     userInput.addEventListener("keyup", (e) => {
-        console.log(userInput.value);
-        if (userInput.value.length < 1) {
-            return;
-        }
-        const valArr = [e.target.value.toUpperCase()];
-        let usersExpectedChoice = [];
-
-        for (const key in infos) {
-            findWord(valArr, infos[key]) > 0
-                ? usersExpectedChoice.push(key)
-                : "";
-        }
-        return findProductCardVonUserChoice(usersExpectedChoice);
+        const val = e.target.value.toUpperCase().replace(/\s/g, "");
+        console.log(val);
+        Dictionary.prototype.findProductInDictionary(val);
     });
 }
 
-export { findProductInNewBook, Dictionary };
+Dictionary.prototype.findProductInDictionary = function (usersval) {
+    const searchPageResultBox = cutequery(".search-page--result-box");
+    searchPageResultBox.innerHTML = "";
+    const keys = Object.keys(localStorage);
+    let len = keys.length;
+
+    while (len--) {
+        const ProductInfo = JSON.parse(localStorage.getItem(keys[len]));
+        const goodsinfo = ProductInfo.goodsName
+            .toUpperCase()
+            .replace(/\s/g, "");
+        const brandinfo = ProductInfo.brandName
+            .toUpperCase()
+            .replace(/\s/g, "");
+        goodsinfo.includes(usersval) || brandinfo.includes(usersval)
+            ? CreateProductCard(ProductInfo, searchPageResultBox)
+            : "";
+    }
+};
+
+export { Dictionary };

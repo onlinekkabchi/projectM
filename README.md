@@ -4,15 +4,18 @@
 
 # Reference
 
-[Working with JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
-[fetch multiple urls at the same time](https://stackoverflow.com/questions/59037553/fetch-multiple-urls-at-the-same-time)
-[How to get the heigt of scroll bar using JavaScript?](https://www.geeksforgeeks.org/how-to-get-the-height-of-scroll-bar-using-javascript/)
+-   [Working with JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+-   [fetch multiple urls at the same time](https://stackoverflow.com/questions/59037553/fetch-multiple-urls-at-the-same-time)
+-   [How to get the heigt of scroll bar using JavaScript?](https://www.geeksforgeeks.org/how-to-get-the-height-of-scroll-bar-using-javascript/)
 
-## Infinite Scroll 관련
+**Infinite Scroll 관련**
 
-[scrollHeight, mdn](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight)
-[Window.pageYOffset, mdn](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset)
+-   [scrollHeight, mdn](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight)
 
-## 검색 관련
+-   [Window.pageYOffset, mdn](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset)
 
-[intersection of two arrays by partial matches](https://stackoverflow.com/questions/56251223/intersection-of-two-arrays-by-partial-matches)
+**검색 관련**
+
+-   [intersection of two arrays by partial matches, stackoverflow](https://stackoverflow.com/questions/56251223/intersection-of-two-arrays-by-partial-matches)
+
+-   [How to retrieve all localStarage items without knowing the keys in advance?, stackoverflow](https://stackoverflow.com/questions/17745292/how-to-retrieve-all-localstorage-items-without-knowing-the-keys-in-advance)
