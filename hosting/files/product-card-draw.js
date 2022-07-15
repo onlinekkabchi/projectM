@@ -24,6 +24,9 @@ function drawProductCardVonRequestURL() {
 
 function drawProductCardVonLocalStorage() {
     const main = cutequery("main");
+    if (!Object.keys(localStorage)) {
+        return;
+    }
     const keys = Object.keys(localStorage);
     let len = keys.length;
     main.innerHTML = "";
