@@ -1,10 +1,12 @@
 $--dark-gray1: #1a1a1a;
 
 .tag-box--is-here{
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 5px 0 10px 0;;
 }
 .filter-tag{
     background-color: $--dark-gray1;
