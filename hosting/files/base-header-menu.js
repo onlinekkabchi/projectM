@@ -1,7 +1,7 @@
 import { cutequery, allcutequery } from "./make-cutie-query.js";
 
 function showSearchPage() {
-    const targetBox = cutequery("header");
+    const targetBox = cutequery(".header-protection");
     const searchPage = `
     <div class="search-page">
     <div class="search-page-box">
@@ -10,10 +10,9 @@ function showSearchPage() {
             <button class="search-page--bar--search-btn-icon">검색</button>
             <input class="search-page--bar--search-input" type="text" placeholder="상품명검색">
         </div>
-        
     </div>
     `;
-    return targetBox.insertAdjacentHTML("afterend", searchPage);
+    return targetBox.insertAdjacentHTML("beforeend", searchPage);
 }
 
 function hideSearchPage() {

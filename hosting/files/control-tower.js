@@ -13,7 +13,7 @@ import {
     showSoldOutProduct,
     hideSoldOutProduct,
 } from "./base-header-menu.js";
-import Tagging from "./tagging.js";
+import { addFilterTag } from "./tagging.js";
 
 export default function ControlTower() {
     this.controlSwitches = {
@@ -27,6 +27,7 @@ export default function ControlTower() {
 
 ControlTower.prototype.init = init(); // 첫 화면 구성.
 ControlTower.prototype.getDataForProducts = drawProductCardVonRequestURL(); // 최초 데이터를 받음.
+ControlTower.prototype.drawFirstCardList = drawProductCardVonLocalStorage(); // localStorage에 저장된 데이터를 카드형태로 화면에 뿌림.
 ControlTower.prototype.searchOnOff = function () {
     if (this.controlSwitches.searchOnOffSwitch === false) {
         showSearchPage();
@@ -44,6 +45,7 @@ ControlTower.prototype.saleProductOnOff = function () {
         showOnlySaleProduct();
         return (this.controlSwitches.saleProductSwitch = true);
     } else if (this.controlSwitches.saleProductSwitch === true) {
+        addFilterTag("세일상품");
         hideOnlySaleProduct();
         return (this.controlSwitches.saleProductSwitch = false);
     } else {
@@ -53,6 +55,7 @@ ControlTower.prototype.saleProductOnOff = function () {
 ControlTower.prototype.musinsaOnlyProductOnOff = function () {
     if (this.controlSwitches.musinsaOnlyProductSwitch === false) {
         showMusinsaOnlyProduct();
+        addFilterTag("단독상품");
         return (this.controlSwitches.musinsaOnlyProductSwitch = true);
     } else if (this.controlSwitches.musinsaOnlyProductSwitch === true) {
         showAllProductIncludeNotMusinsaOnly();
@@ -64,6 +67,7 @@ ControlTower.prototype.musinsaOnlyProductOnOff = function () {
 ControlTower.prototype.soldOutProductOnOff = function () {
     if (this.controlSwitches.includeSoldOutProductSwitch === false) {
         showSoldOutProduct();
+        addFilterTag("품절포함");
         return (this.controlSwitches.includeSoldOutProductSwitch = true);
     } else if (this.controlSwitches.includeSoldOutProductSwitch === true) {
         hideSoldOutProduct();

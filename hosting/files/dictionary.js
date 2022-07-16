@@ -11,8 +11,8 @@ function Dictionary() {
 }
 
 Dictionary.prototype.findProductInDictionary = function (usersval) {
-    const searchPageResultBox = cutequery("main");
-    searchPageResultBox.innerHTML = "";
+    const productCardList = cutequery(".product-card-list");
+    productCardList.innerHTML = "";
     const keys = Object.keys(localStorage);
     let len = keys.length;
 
@@ -25,7 +25,7 @@ Dictionary.prototype.findProductInDictionary = function (usersval) {
             .toUpperCase()
             .replace(/\s/g, "");
         goodsinfo.includes(usersval) || brandinfo.includes(usersval)
-            ? CreateProductCard(ProductInfo, searchPageResultBox)
+            ? CreateProductCard(ProductInfo, productCardList)
             : "";
     }
 };

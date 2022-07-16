@@ -1,0 +1,18 @@
+$--dark-gray1: #1a1a1a;
+
+.tag-box--is-here{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.filter-tag{
+    background-color: $--dark-gray1;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    margin: 3px;
+    cursor: pointer;
+}
