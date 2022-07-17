@@ -6,7 +6,7 @@
 
 ## 선정이유
 - vanillaJs 사용 : component 중심으로 돌아가는 ReactJs보다 다양한 값을 결과값으로 낼 수 있기 때문에 자동완성기능이 있는 동적인 페이지를 구현하는데는 vanillaJs가 적합하다고 판단했다. TypeScript는 사용할 수 있지만 아직 미숙하기때문에 과제에 사용하지 않았다.
-- css는 sass를 이용해 compile했다. css 작업물은 sass-style 폴더에서 확인할 수 있다.
+- css는 sass를 이용해 compile했다. scss 파일 작업물은 sass-style 폴더에서 확인할 수 있다.
 
 ## 구성
 - script는 component위주로 작성하였다.
