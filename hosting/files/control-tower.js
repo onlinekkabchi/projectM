@@ -13,7 +13,7 @@ import {
     showSoldOutProduct,
     hideSoldOutProduct,
 } from "./base-header-menu.js";
-import { addFilterTag } from "./tagging.js";
+import { addFilterTag, removeFilterTag } from "./tagging.js";
 
 export default function ControlTower() {
     this.controlSwitches = {
@@ -67,7 +67,7 @@ ControlTower.prototype.musinsaOnlyProductOnOff = function () {
 ControlTower.prototype.soldOutProductOnOff = function () {
     if (this.controlSwitches.includeSoldOutProductSwitch === false) {
         showSoldOutProduct();
-        addFilterTag("품절포함");
+        addFilterTag("품절포함", "tag-include-soldout-product");
         return (this.controlSwitches.includeSoldOutProductSwitch = true);
     } else if (this.controlSwitches.includeSoldOutProductSwitch === true) {
         hideSoldOutProduct();

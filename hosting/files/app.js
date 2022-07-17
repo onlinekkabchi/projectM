@@ -1,5 +1,5 @@
 import ControlTower from "./control-tower.js";
-import { cutequery } from "./make-cutie-query.js";
+import { cutequery, allcutequery } from "./make-cutie-query.js";
 import { Dictionary } from "./dictionary.js";
 import infiniteScroll from "./infinite-scroll.js";
 
@@ -9,6 +9,7 @@ const searchBtn = cutequery(".btn-search");
 const saleProductBtn = cutequery(".btn-sale-product");
 const musinsaOnlyProductBtn = cutequery(".btn-only-product");
 const includeSoldoutBtn = cutequery(".btn-include-soldout");
+
 searchBtn.addEventListener("click", () => {
     joystick.searchOnOff();
     searchBtn.classList.toggle("btn--clicked");
@@ -18,6 +19,7 @@ saleProductBtn.addEventListener("click", () => {
     joystick.saleProductOnOff();
     saleProductBtn.classList.toggle("btn--clicked");
 });
+
 musinsaOnlyProductBtn.addEventListener("click", () => {
     joystick.musinsaOnlyProductOnOff();
     musinsaOnlyProductBtn.classList.toggle("btn--clicked");
