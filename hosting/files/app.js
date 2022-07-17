@@ -13,7 +13,9 @@ const includeSoldoutBtn = cutequery(".btn-include-soldout");
 searchBtn.addEventListener("click", () => {
     joystick.searchOnOff();
     searchBtn.classList.toggle("btn--clicked");
-    const newBook = new Dictionary(); // 검색바 열림
+    if (cutequery(".search-page--bar--search-input")) {
+        const newBook = new Dictionary(); // 검색바 열림
+    }
 });
 saleProductBtn.addEventListener("click", () => {
     joystick.saleProductOnOff();

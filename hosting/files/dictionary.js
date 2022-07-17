@@ -6,12 +6,10 @@ function Dictionary() {
     const userInput = cutequery(".search-page--bar--search-input");
     userInput.addEventListener("keyup", (e) => {
         if (e.key === "Enter") {
-            console.log("enter");
             addSearchResultTag(e.target.value);
             return;
         }
         const val = e.target.value.toUpperCase().replace(/\s/g, "");
-        console.log(val);
         Dictionary.prototype.findProductInDictionary(val);
     });
 }
