@@ -11,6 +11,7 @@
 
 ## 구성
 - script는 component위주로 작성하였다.
+- flex-wrap:wrap을 넣어 화면 크기에 상관없이(웹, 모바일 포괄) 상품정보를 확인할 수 있도록 하였다.
 - main/hosting/files 폴더 안에 페이지를 구성하는 script가 전부 들어있다. MongoDB로 자동배포 중인데 별도의 Route가 있지않은 이상 폴더를 허용하지않는 MongoDB의 호스팅 법 상 따로 폴더구조가 존재하지 않는다. 따로 폴더를 만드는 대신 서로 영향을 많이 주는 파일은 부분적으로 이름을 통일했다.(예시: product-card.js/product-card-draw.js)
 
 ***구조***
