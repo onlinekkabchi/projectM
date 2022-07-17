@@ -43,7 +43,6 @@ ControlTower.prototype.searchOnOff = function () {
 ControlTower.prototype.saleProductOnOff = function () {
     if (this.controlSwitches.saleProductSwitch === false) {
         showOnlySaleProduct();
-        removeFilterTag(".tag-sale-product");
         return (this.controlSwitches.saleProductSwitch = true);
     } else if (this.controlSwitches.saleProductSwitch === true) {
         addFilterTag("세일상품");
@@ -59,7 +58,6 @@ ControlTower.prototype.musinsaOnlyProductOnOff = function () {
         addFilterTag("단독상품");
         return (this.controlSwitches.musinsaOnlyProductSwitch = true);
     } else if (this.controlSwitches.musinsaOnlyProductSwitch === true) {
-        removeFilterTag(".tag-musinsa-only-product");
         showAllProductIncludeNotMusinsaOnly();
         return (this.controlSwitches.musinsaOnlyProductSwitch = false);
     } else {
@@ -73,7 +71,6 @@ ControlTower.prototype.soldOutProductOnOff = function () {
         return (this.controlSwitches.includeSoldOutProductSwitch = true);
     } else if (this.controlSwitches.includeSoldOutProductSwitch === true) {
         hideSoldOutProduct();
-        removeFilterTag(".tag-include-soldout-product");
         return (this.controlSwitches.includeSoldOutProductSwitch = false);
     } else {
         console.error();
