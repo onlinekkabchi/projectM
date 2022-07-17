@@ -1,12 +1,12 @@
 .search-page {
-  transition: 0.3s;
   background-color: white;
   width: 100%;
-  height: auto;
+  height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 12px;
   border-bottom: 1px solid;
 }
 .search-page-box {
@@ -129,13 +129,15 @@
 }
 
 .tag-box--is-here {
+  background-color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 5px 0 10px 0;
 }
 
-.filter-tag {
+.tag-style {
   background-color: #1a1a1a;
   color: white;
   font-size: 12px;
