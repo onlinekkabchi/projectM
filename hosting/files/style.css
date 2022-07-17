@@ -41,7 +41,7 @@
 
 .product-card {
   width: 150px;
-  height: 460px;
+  height: 450px;
   padding: 0;
   margin: 10px;
   font-size: 12px;
@@ -51,7 +51,7 @@
   flex-wrap: wrap;
 }
 .product-card--goods-info-box {
-  height: 335px;
+  height: 300px;
 }
 .product-card--img {
   width: 145px;

@@ -1,7 +1,7 @@
 .product{
     &-card{
         width: 150px;
-        height: 460px;
+        height: 450px;
         padding: 0;
         margin:10px;
         font-size: 12px;
@@ -10,7 +10,7 @@
             flex-wrap: wrap;
         }
         &--goods-info-box{
-            height: 335px;
+            height: 300px;
         }
         &--img{
             width: 145px;
