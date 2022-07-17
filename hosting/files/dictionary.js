@@ -1,9 +1,15 @@
 import { cutequery } from "./make-cutie-query.js";
 import CreateProductCard from "./product-card.js";
+import { addSearchResultTag } from "./tagging.js";
 
 function Dictionary() {
     const userInput = cutequery(".search-page--bar--search-input");
     userInput.addEventListener("keyup", (e) => {
+        if (e.key === "Enter") {
+            console.log("enter");
+            addSearchResultTag(e.target.value);
+            return;
+        }
         const val = e.target.value.toUpperCase().replace(/\s/g, "");
         console.log(val);
         Dictionary.prototype.findProductInDictionary(val);

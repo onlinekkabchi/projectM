@@ -13,7 +13,7 @@ import {
     showSoldOutProduct,
     hideSoldOutProduct,
 } from "./base-header-menu.js";
-import { addFilterTag, removeTag } from "./tagging.js";
+import { addFilterTag, removeFilterTag } from "./tagging.js";
 
 export default function ControlTower() {
     this.controlSwitches = {
@@ -43,10 +43,10 @@ ControlTower.prototype.searchOnOff = function () {
 ControlTower.prototype.saleProductOnOff = function () {
     if (this.controlSwitches.saleProductSwitch === false) {
         showOnlySaleProduct();
-        removeTag(".tag-sale-product");
+        removeFilterTag(".tag-sale-product");
         return (this.controlSwitches.saleProductSwitch = true);
     } else if (this.controlSwitches.saleProductSwitch === true) {
-        addFilterTag("세일상품", "tag-sale-product tag");
+        addFilterTag("세일상품");
         hideOnlySaleProduct();
         return (this.controlSwitches.saleProductSwitch = false);
     } else {
@@ -56,10 +56,10 @@ ControlTower.prototype.saleProductOnOff = function () {
 ControlTower.prototype.musinsaOnlyProductOnOff = function () {
     if (this.controlSwitches.musinsaOnlyProductSwitch === false) {
         showMusinsaOnlyProduct();
-        addFilterTag("단독상품", "tag-musinsa-only-product tag");
+        addFilterTag("단독상품");
         return (this.controlSwitches.musinsaOnlyProductSwitch = true);
     } else if (this.controlSwitches.musinsaOnlyProductSwitch === true) {
-        removeTag(".tag-musinsa-only-product");
+        removeFilterTag(".tag-musinsa-only-product");
         showAllProductIncludeNotMusinsaOnly();
         return (this.controlSwitches.musinsaOnlyProductSwitch = false);
     } else {
@@ -69,11 +69,11 @@ ControlTower.prototype.musinsaOnlyProductOnOff = function () {
 ControlTower.prototype.soldOutProductOnOff = function () {
     if (this.controlSwitches.includeSoldOutProductSwitch === false) {
         showSoldOutProduct();
-        addFilterTag("품절포함", "tag-include-soldout-product tag");
+        addFilterTag("품절포함", "tag-include-soldout-product");
         return (this.controlSwitches.includeSoldOutProductSwitch = true);
     } else if (this.controlSwitches.includeSoldOutProductSwitch === true) {
         hideSoldOutProduct();
-        removeTag(".tag-include-soldout-product");
+        removeFilterTag(".tag-include-soldout-product");
         return (this.controlSwitches.includeSoldOutProductSwitch = false);
     } else {
         console.error();
