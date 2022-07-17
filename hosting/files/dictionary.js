@@ -7,6 +7,7 @@ function Dictionary() {
     userInput.addEventListener("keyup", (e) => {
         if (e.key === "Enter") {
             addSearchResultTag(e.target.value);
+            e.currentTarget.value = "";
             return;
         }
         const val = e.target.value.toUpperCase().replace(/\s/g, "");
