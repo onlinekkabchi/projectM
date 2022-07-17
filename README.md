@@ -6,16 +6,16 @@
 
 ## 선정이유
 - vanillaJs 사용 : component 중심으로 돌아가는 ReactJs보다 다양한 값을 결과값으로 낼 수 있기 때문에 자동완성기능이 있는 동적인 페이지를 구현하는데는 vanillaJs가 적합하다고 판단했다. TypeScript는 사용할 수 있지만 아직 미숙하기때문에 과제에 사용하지 않았다.
-- css는 sass를 이용해 compile했다. scss 파일 작업물은 sass-style 폴더에서 확인할 수 있다.
+- css에 동적으로 움직이는 부분이 많아. pure css를 사용할 경우 작업규모가 커질수록 수정이 어려워질거라 판단하여 sass를 사용하였다. sass 작업물(.scss 파일)은 sass-style 폴더에서 확인할 수 있다.
 
 ## 구성
 - script는 component위주로 작성하였다.
 - main/hosting/files 폴더 안에 페이지를 구성하는 script가 전부 들어있다. MongoDB로 자동배포 중인데 별도의 Route가 있지않은 이상 폴더를 허용하지않는 MongoDB의 호스팅 법 상 따로 폴더구조가 존재하지 않는다. 따로 폴더를 만드는 대신 서로 영향을 많이 주는 파일은 부분적으로 이름을 통일했다.(예시: product-card.js/product-card-draw.js)
 
-***hosting 폴더 내 스크립트 목록***
+***구조***
 <br>
 <br>
-![my-scripts](https://user-images.githubusercontent.com/66970178/179389197-35b82872-03b9-4bc6-a634-7bd10f30703f.png)
+![structure_mu](https://user-images.githubusercontent.com/66970178/179390462-54ab8539-4d40-42df-89b4-ec96d7c1f08a.png)
 
 
 ***product-card.js의 결과물***
