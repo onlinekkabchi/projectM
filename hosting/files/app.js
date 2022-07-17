@@ -13,7 +13,7 @@ const includeSoldoutBtn = cutequery(".btn-include-soldout");
 searchBtn.addEventListener("click", () => {
     joystick.searchOnOff();
     searchBtn.classList.toggle("btn--clicked");
-    if (cutequery(".search-page--bar--search-input")) {
+    if (cutequery(".search-page")) {
         const newBook = new Dictionary(); // 검색바 열림
     }
 });

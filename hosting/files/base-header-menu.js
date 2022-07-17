@@ -4,10 +4,9 @@ function showSearchPage() {
     const targetBox = cutequery(".header-protection");
     const searchPage = `
     <div class="search-page">
-    <div class="search-page-box">
         <div class="search-page--bar">
-            <input class="search-page--bar--search-input" type="text" placeholder="상품명검색">
-            <button class="search-page--bar--search-btn-icon">검색</button>
+            <input class="search-page--bar search-bar--input" name="userinput" type="text" placeholder="상품명검색">
+            <button class="search-page--bar search-bar--btn-icon">검색</button>
         </div>
     </div>
     `;
