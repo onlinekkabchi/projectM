@@ -26,6 +26,27 @@
   flex-wrap: wrap;
   padding-top: 5px;
 }
+.search-page--bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: auto;
+}
+.search-page--bar--search-input {
+  width: 215px;
+  height: 28px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+.search-page--bar--search-btn-icon {
+  width: 50px;
+  height: 28px;
+  color: white;
+  background-color: black;
+  font-size: 12px;
+  border-radius: 5px;
+}
 
 .product-card {
   width: 180px;

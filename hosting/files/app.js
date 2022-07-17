@@ -9,7 +9,6 @@ const searchBtn = cutequery(".btn-search");
 const saleProductBtn = cutequery(".btn-sale-product");
 const musinsaOnlyProductBtn = cutequery(".btn-only-product");
 const includeSoldoutBtn = cutequery(".btn-include-soldout");
-const tagBox = cutequery(".tag-box--is-here");
 searchBtn.addEventListener("click", () => {
     joystick.searchOnOff();
     searchBtn.classList.toggle("btn--clicked");
