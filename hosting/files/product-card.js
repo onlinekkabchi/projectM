@@ -5,7 +5,7 @@ function CreateProductCard(el, targetBox) {
     productCard.innerHTML += `
         <div class="product-card--goods-info-box">
             <a href=${el.linkUrl} target="_blank">
-                <img class="product-card--img" src=${el.imageUrl}>
+                <img class="product-card--img" src=${el.imageUrl} onerror="this.src='https://image.msscdn.net/musinsaUI/homework/data/img.jpg';" >
             </a>
             <a href=${el.brandLinkUrl} target="_blank">
                 <p class="product-card--brand-name">${el.brandName}</p>

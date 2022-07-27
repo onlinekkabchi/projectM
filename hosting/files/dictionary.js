@@ -3,16 +3,27 @@ import CreateProductCard from "./product-card.js";
 import { addSearchResultTag } from "./tagging.js";
 
 function Dictionary() {
-    const userInput = cutequery(".search-page--bar--search-input");
-    userInput.addEventListener("keyup", (e) => {
+    const userInput = cutequery("input[name=userinput]");
+    const searchBtn = cutequery(".search-bar--btn-icon");
+
+    function startSearchParty(e) {
         if (e.key === "Enter") {
-            console.log("enter");
             addSearchResultTag(e.target.value);
+            e.currentTarget.value = "";
             return;
         }
         const val = e.target.value.toUpperCase().replace(/\s/g, "");
-        console.log(val);
         Dictionary.prototype.findProductInDictionary(val);
+    }
+
+    userInput.addEventListener("keyup", (e) => {
+        startSearchParty(e);
+    });
+    searchBtn.addEventListener("click", () => {
+        addSearchResultTag(userInput.value);
+        const val = userInput.value.toUpperCase().replace(/\s/g, "");
+        Dictionary.prototype.findProductInDictionary(val);
+        return (userInput.value = "");
     });
 }
 

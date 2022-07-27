@@ -13,7 +13,6 @@ function addSearchResultTag(tagname) {
     const tagBox = cutequery(".tag-box--is-here");
     const thetag = document.createElement("div");
     const tagClass = [0, 1, 2].map((el) => tagname.charCodeAt(el));
-    console.log(tagClass);
     thetag.className = `tag-style search-result-tag ${tagClass}`;
     thetag.innerText = tagname + "(X)";
     thetag.addEventListener("click", removeTag);

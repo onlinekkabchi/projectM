@@ -1,8 +1,7 @@
 .product{
     &-card{
-        
-        width: 180px;
-        height: 460px;
+        width: 150px;
+        height: 450px;
         padding: 0;
         margin:10px;
         font-size: 12px;
@@ -11,11 +10,11 @@
             flex-wrap: wrap;
         }
         &--goods-info-box{
-            height: 335px;
+            height: 300px;
         }
         &--img{
-            width: 180px;
-            height: 230px;
+            width: 145px;
+            height: 170px;
         }
         &--price{
             &-info{
@@ -41,6 +40,11 @@
             border: 1px solid;
             border-radius: 15px;
             border-color: $--light-gray3;
+        }
+        &--goods-name{
+            width: auto;
+            padding: 2px;
+            margin: 1px;
         }
         &--kauf-box{
             height: 35px;

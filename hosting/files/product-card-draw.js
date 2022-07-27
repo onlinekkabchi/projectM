@@ -3,7 +3,6 @@ import { cutequery } from "./make-cutie-query.js";
 import CreateProductCard from "./product-card.js";
 
 function drawProductCardVonRequestURL() {
-    const main = cutequery("main");
     Promise.all(
         requestURL.map((uri) => {
             fetch(uri)
@@ -15,6 +14,9 @@ function drawProductCardVonRequestURL() {
                             JSON.stringify(el)
                         );
                     });
+                })
+                .catch((error) => {
+                    console.log(error);
                 });
         })
     );
